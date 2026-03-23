@@ -33,7 +33,6 @@ body {
     font-size: 16px;
 }
 
-/* LINKS E ELEMENTOS INTERATIVOS */
 a {
     color: var(--azul-marinho);
     text-decoration: none;
@@ -44,28 +43,25 @@ a:hover {
     color: var(--azul-claro);
 }
 
-/* NAVEGAÇÃO */
+/*SEÇÃO DE NAVEGAÇÃO */
 .barra {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px; /* Espaçamento entre os itens */
+    gap: 15px;
     position: fixed;
-    width: 95%; /* Não ocupa a tela toda para parecer flutuante */
+    width: 95%;
     max-width: 1200px;
     height: 70px;
     top: 20px;
     left: 50%;
-    transform: translateX(-50%); /* Centraliza a barra flutuante */
+    transform: translateX(-50%);
     z-index: 1000;
-    
-    /* Degradê sutil com transparência */
     background: linear-gradient(135deg, rgba(15, 42, 74, 0.9), rgba(26, 26, 26, 0.8));
-    backdrop-filter: blur(12px); /* Efeito de vidro fosco */
+    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50px; /* Bordas arredondadas estilo pílula */
+    border-radius: 50px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     padding: 0 30px;
 }
@@ -75,7 +71,7 @@ a:hover {
 }
 
 .barra p a {
-    color: rgba(255, 255, 255, 0.7); /* Cor padrão mais suave */
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     font-weight: 600;
     text-transform: uppercase;
@@ -88,15 +84,13 @@ a:hover {
     position: relative;
 }
 
-/* DESTAQUE AO PASSAR O MOUSE (HOVER) */
 .barra p a:hover {
     color: #ffffff;
-    background: rgba(74, 117, 168, 0.3); /* Fundo azul marinho suave no hover */
+    background: rgba(74, 117, 168, 0.3);
     transform: translateY(-2px);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-/* LINHA INDICADORA EMBAIXO NO HOVER */
 .barra p a::after {
     content: '';
     position: absolute;
@@ -111,12 +105,10 @@ a:hover {
 }
 
 .barra p a:hover::after {
-    width: 30px; /* A linha cresce no meio ao passar o mouse */
+    width: 30px;
 }
 
 /* SEÇÃO INICIAL */
-
-/* SEÇÃO INICIAL COM IMAGEM E DEGRADÊ */
 .inicio {
     width: 100%;
     height: 100vh;
@@ -124,12 +116,8 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    
-    /* Camada 1: Degradê semi-transparente (Azul Marinho para Preto) */
-    /* Camada 2: Imagem do Pexels */
     background: linear-gradient(to right, rgba(15, 42, 74, 0.85), rgba(0, 0, 0, 0.6)), 
                 url("data:image/jpeg;base64,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") center center / cover no-repeat fixed;
-    
     color: var(--branco);
     padding-left: 10%;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.5); 
@@ -138,20 +126,19 @@ a:hover {
 .div_des_inicial {
     max-width: 600px;
     z-index: 2;
-    padding-top: -100px;
 }
 
 .div_des_inicial h1 {
-    font-size: 4.2rem; /* Tamanho maior */
+    font-size: 4.2rem;
     line-height: 1.1;
     margin-bottom: 15px;
     font-weight: 800;
     color: var(--branco);
 }
 
-.div_des_inicial h1:first-of-type { /* Primeiro H1 para o nome */
+.div_des_inicial h1:first-of-type {
     font-size: 4.8rem;
-    color: var(--azul-claro); /* Destaca o nome */
+    color: var(--azul-claro);
 }
 
 .div_des_inicial h2 {
@@ -161,8 +148,7 @@ a:hover {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* BOTÃO ESTILIZADO */
-.div_des_inicial .btn-contato { /* Classe específica para o botão */
+.div_des_inicial .btn-contato {
     margin-top: 40px;
     background: var(--azul-claro);
     width: fit-content;
@@ -175,7 +161,7 @@ a:hover {
     letter-spacing: 1px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: var(--transicao-rapida);
-    display: inline-block; /* Para o padding funcionar */
+    display: inline-block;
 }
 
 .div_des_inicial .btn-contato:hover {
@@ -184,7 +170,6 @@ a:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* CAIXAS DESTAQUE SOBRE O INÍCIO */
 .caixas_sobre_inicio {
     display: flex;
     justify-content: center; 
@@ -203,18 +188,18 @@ a:hover {
 .caixa1_inicio {
     flex: 0 1 350px;        
     min-width: 280px;       
-    padding: 35px 25px;      /* Aumenta o respiro interno */
+    padding: 35px 25px;
     background: linear-gradient(180deg, #ffebeb 10%, #e4e4e4 100%);
     color: var(--preto);
-    border-radius: 12px;     /* Bordas mais arredondadas ficam mais modernas */
+    border-radius: 12px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.12);
     transition: var(--transicao-rapida);
     border-top: 5px solid var(--azul-claro);
-    text-align: center;      /* Centraliza o texto dentro da caixa */
+    text-align: center;
 }
 
 .caixa1_inicio h3 {
-    font-size: 1.4rem;       /* Título um pouco maior */
+    font-size: 1.4rem;
     margin-bottom: 12px;
     color: var(--azul-marinho);
     font-weight: 700;
@@ -228,15 +213,15 @@ a:hover {
 
 /* SEÇÃO DE DIVISÃO */
 .divisao1 {
-    height: 150px; /* Ajustada para um respiro */
-    width: 100%;
-    background: linear-gradient(#ffebeb 10%); /* Cor clara para contraste */
-}
-
-.divisao2{
     height: 150px;
     width: 100%;
-    background: linear-gradient(#e4e4e4 100%);
+    background: #ffebeb;
+}
+
+.divisao2 {
+    height: 150px;
+    width: 100%;
+    background: #e4e4e4;
 }
 
 /* SEÇÃO DO ADVOGADO */
@@ -251,30 +236,30 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px; /* Mais espaço entre elementos */
+    gap: 80px;
 }
 
 .div_foto {
     position: relative;
-    width: 350px; /* Aumentado */
+    width: 350px;
     flex-shrink: 0;
-    box-shadow: 15px 15px 0px var(--azul-marinho); /* Sombra mais elegante */
-    border: 3px solid var(--branco); /* Borda interna para a imagem */
+    box-shadow: 15px 15px 0px var(--azul-marinho);
+    border: 3px solid var(--branco);
 }
 
 .div_foto img {
     width: 100%;
-    height: 450px; /* Aumentado */
+    height: 450px;
     object-fit: cover;
     display: block;
 }
 
 .card_nome {
     position: absolute;
-    bottom: -30px; /* Move o card para baixo */
+    bottom: -30px;
     left: 50%;
-    transform: translateX(-50%); /* Centraliza o card */
-    width: 80%; /* Ajusta a largura */
+    transform: translateX(-50%);
+    width: 80%;
     background: linear-gradient(to right, var(--azul-claro), var(--azul-marinho));
     text-align: center;
     padding: 15px 20px;
@@ -300,7 +285,7 @@ a:hover {
 }
 
 .div_sobre h2 {
-    font-size: 2.8rem; /* Tamanho maior */
+    font-size: 2.8rem;
     margin-bottom: 25px;
     color: var(--azul-marinho);
     position: relative;
@@ -327,7 +312,7 @@ a:hover {
 
 /* SEÇÃO DE ATUAÇÕES */
 .Atuacoes {
-    background: linear-gradient(to bottom, var(--azul-marinho), var(--preto)); /* Degradê vertical */
+    background: linear-gradient(to bottom, var(--azul-marinho), var(--preto));
     padding: 100px 0;
     color: var(--branco);
 }
@@ -362,14 +347,14 @@ a:hover {
 }
 
 .div_atuacoes div {
-    background: rgba(255, 255, 255, 0.08); /* Fundo semi-transparente */
+    background: rgba(255, 255, 255, 0.08);
     padding: 35px;
     color: var(--branco);
     min-height: 200px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.15);
     transition: var(--transicao-rapida);
-    backdrop-filter: blur(5px); /* Efeito de vidro */
+    backdrop-filter: blur(5px);
 }
 
 .div_atuacoes div:hover {
@@ -465,11 +450,11 @@ a:hover {
 
 .btn-whatsapp {
     display: inline-block;
-    background-color: #25d366; /* WhatsApp Green */
+    background-color: #25d366;
     color: var(--branco);
     padding: 15px 35px;
     text-decoration: none;
-    border-radius: 50px; /* Botão arredondado */
+    border-radius: 50px;
     font-weight: bold;
     margin-top: 30px;
     transition: var(--transicao-rapida);
@@ -495,12 +480,12 @@ a:hover {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    border: 5px solid var(--branco); /* Borda para a imagem */
+    border: 5px solid var(--branco);
 }
 
 /* FOOTER */
 .footer-site {
-    background: linear-gradient(to top, var(--preto), var(--azul-marinho)); /* Degradê no footer */
+    background: linear-gradient(to top, var(--preto), var(--azul-marinho));
     color: var(--branco);
     padding: 60px 20px;
     font-family: 'Roboto', sans-serif;
@@ -562,22 +547,17 @@ a:hover {
     color: var(--branco);
 }
 
-/*-----------------------------------------------------*/
-
-/*Botoes de Redes*/
-
-/* CONTAINER DOS BOTÕES */
+/* BOTÕES REDES SOCIAIS */
 .botoes-flutuantes {
     position: fixed;
     bottom: 30px;
-    right: 30px; /* Alinhado à esquerda conforme solicitado */
+    right: 30px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     z-index: 9999;
 }
 
-/* ESTILO BASE DOS BOTÕES */
 .btn-float {
     width: 60px;
     height: 60px;
@@ -607,102 +587,28 @@ a:hover {
     box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
-/* AJUSTE PARA MOBILE */
-@media (max-width: 768px) {
-    .btn-float {
-        width: 50px;
-        height: 50px;
-    }
-    .btn-float img {
-        width: 25px;
-        height: 25px;
-    }
-    .botoes-flutuantes {
-        bottom: 20px;
-        left: 20px;
-    }
-}
-
-/* RESPONSIVIDADE */
-@media (max-width: 992px) {
-    .inicio { padding-left: 5%; }
-    .div_des_inicial h1 { font-size: 3.5rem; }
-    .div_des_inicial h1:first-of-type { font-size: 4rem; }
-    .caixas_sobre_inicio { bottom: -60px; gap: 20px; max-width: 85%; }
-    .caixa1_inicio { max-width : 2rem; }
-    .container_sobre { flex-direction: column; text-align: center; gap: 40px; }
-    .div_foto { margin-bottom: 60px; }
-    .card_nome { width: 90%; bottom: -40px; }
-    .div_sobre h2::after { margin: 10px auto 0; }
-    .fale-conosco .container { flex-direction: column; text-align: center; }
-    .title::after { margin: 10px auto; }
-    .contact-item { justify-content: center; }
-    .contact-image { order: -1; margin-bottom: 40px; }
-    .div_sobre h2 {
-        font-size: 2.2rem;
-        text-align: center;
-        padding-bottom: 15px;
-    }
-
-    .div_sobre h2::after {
-        content: "";
-        display: block;
-        width: 580px; /* Aumentei a barra para ela "acompanhar melhor" o destaque no celular */
-        height: 4px;
-        background-color: var(--azul-claro);
-        margin: 10px auto 0; /* Centraliza a barra abaixo do título */
-        border-radius: 2px;
-    }
-}
-
-@media (max-width: 768px) {
-    .barra { gap: 20px; padding: 0px 0; }
-    .barra p { font-size: 0.8rem; }
-    .inicio { height: 90vh; justify-content: center; text-align: center; padding-left: 0; }
-    .div_des_inicial { max-width: 90%; padding-top: 0; }
-    .div_des_inicial h1 { font-size: 2.8rem; }
-    .div_des_inicial h1:first-of-type { font-size: 3.2rem; }
-    .div_des_inicial h2 { font-size: 1rem; }
-    .div_des_inicial .btn-contato { margin-top: 30px; padding: 12px 25px; }
-    .caixas_sobre_inicio { max-width: 0.2rem;}
-    .caixa1_inicio { max-width:0.2rem; }
-    .divisao { height: 100px; }
-    .Sobre { padding-top: 100px; }
-    .div_foto { width: 90%; height: auto; }
-    .div_foto img { height: 350px; }
-    .card_nome { bottom: -30px; width: 85%; }
-    .div_sobre h2 { font-size: 2.2rem; }
-    .Atuacoes h2 { font-size: 2.5rem; }
-    .div_atuacoes { width: 90%; gap: 25px; }
-    .fale-conosco { padding: 80px 20px; }
-    .title { font-size: 2.5rem; }
-    .subtitle { font-size: 1rem; }
-    .footer-column { min-width: 100%; text-align: center; }
-    .footer-column h3::after { margin: 5px auto 0; }
-    .social-icons { justify-content: center; }
-}
-
+/* RESPONSIVIDADE GERAL */
 @media (max-width: 992px) {
     .inicio { padding-left: 5%; }
     .div_des_inicial h1 { font-size: 3.5rem; }
     .div_des_inicial h1:first-of-type { font-size: 4rem; }
     
-    /* Ajuste das caixas para telas médias */
     .caixas_sobre_inicio { 
         bottom: -60px; 
         gap: 20px; 
         max-width: 95%; 
-        flex-wrap: wrap; /* Permite que elas quebrem a linha se necessário */
+        flex-wrap: wrap;
     }
     .caixa1_inicio { 
-        flex: 1 1 250px; /* Tenta manter 250px de largura */
+        flex: 1 1 250px;
         max-width: 100%; 
     }
 
     .container_sobre { flex-direction: column; text-align: center; gap: 40px; }
     .div_foto { margin-bottom: 60px; margin-left: auto; margin-right: auto; }
     .card_nome { width: 90%; bottom: -40px; }
-    .div_sobre h2::after { margin: 10px auto 0; }
+    .div_sobre h2 { font-size: 2.2rem; text-align: center; padding-bottom: 15px; }
+    .div_sobre h2::after { width: 120px; margin: 10px auto 0; }
     .fale-conosco .container { flex-direction: column; text-align: center; }
     .title::after { margin: 10px auto; }
     .contact-item { justify-content: center; }
@@ -717,6 +623,7 @@ a:hover {
     .div_des_inicial { max-width: 90%; }
     .div_des_inicial h1 { font-size: 2.5rem; }
     .div_des_inicial h1:first-of-type { font-size: 3rem; }
+    .div_des_inicial h2 { font-size: 1rem; }
     
     .caixas_sobre_inicio { 
         position: relative; 
@@ -728,12 +635,9 @@ a:hover {
         align-items: center;
         max-width: 100%; 
     }
-    .caixa1_inicio { 
-        width: 90%; 
-        max-width: 400px; 
-    }
+    .caixa1_inicio { width: 90%; max-width: 400px; }
 
-    .divisao1, .divisao2 { height: 50px; }
+    .divisao1, .divisao2 { height: 80px; }
     .Sobre { padding-top: 50px; }
     .div_foto { width: 280px; height: auto; }
     .div_foto img { height: 350px; }
@@ -741,8 +645,11 @@ a:hover {
     .div_sobre h2 { font-size: 2rem; }
     .Atuacoes h2 { font-size: 2.2rem; }
     .div_atuacoes { width: 90%; gap: 20px; }
+    .title { font-size: 2.5rem; }
+    .botoes-flutuantes { left: 20px; right: auto; bottom: 20px; }
 }
 
+/* ANIMAÇÕES REVEAL */
 .reveal-up {
     opacity: 0;
     transform: translateY(40px);
@@ -761,7 +668,6 @@ a:hover {
     transition: all 0.8s ease-out;
 }
 
-/* Estado final: Visível e na posição correta */
 .reveal-up.active,
 .reveal-left.active,
 .reveal-right.active {
@@ -769,7 +675,6 @@ a:hover {
     transform: translate(0, 0);
 }
 
-/* Efeito Cascata: Os blocos de atuação aparecem um por um */
 .div_atuacoes div:nth-child(1) { transition-delay: 0.1s; }
 .div_atuacoes div:nth-child(2) { transition-delay: 0.2s; }
 .div_atuacoes div:nth-child(3) { transition-delay: 0.3s; }
